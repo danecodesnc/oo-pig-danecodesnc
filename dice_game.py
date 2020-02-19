@@ -20,8 +20,7 @@ class Game:
         player_turn_score = 0
         computer_turn_score = 0
        
-        
-       
+  
         while self.player.score < 100 and self.computer.score < 100:
             choice = input ("Would you like to (r)oll or (s)top? ")
             if choice == 'r':
@@ -57,9 +56,7 @@ class Player:
         
     def __str__(self):
             return f"{self.name}"
-
-
-        
+      
 
 class Computer:
     # In this case this will be a computer generated option, rather than it be another human player.
