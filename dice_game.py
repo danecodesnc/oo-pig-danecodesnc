@@ -13,6 +13,8 @@ class Game:
         self.player = Player("Dane")
         self.computer = Computer("Computer")
         self.dice = Dice(SIDES)
+        self.total_computer_score = 0
+        self.total_player_score = 0
 
     
     def round(self):
@@ -37,7 +39,7 @@ class Game:
 
 class Dice:
         def __init__(self, sides):
-            self.sides = sides
+            self.sides = SIDES
 
         def roll(self):
             score = choice(self.sides) 
@@ -53,6 +55,7 @@ class Player:
     def __init__(self, name):
         self.name = name
         self.score = 0
+        self.total_score = 0
         
     def __str__(self):
             return f"{self.name}"
@@ -63,13 +66,13 @@ class Computer:
         def __init__(self, name):
             self.name = name
             self.score = 0
+            self.total_score = 0
 
         def __str__(self):
             return f"{self.name}"
-
         
 
-
+        
 game = Game()
 game.round()
 
